@@ -37,3 +37,9 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+# Archivos temporales de Base de Datos locales
+*.lck
+
+# Cualquier otro archivo de configuración de IntelliJ que falte
+.idea/vcs.xml
