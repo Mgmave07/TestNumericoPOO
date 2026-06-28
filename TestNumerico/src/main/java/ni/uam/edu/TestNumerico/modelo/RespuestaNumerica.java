@@ -37,12 +37,18 @@ public class RespuestaNumerica {
     @ManyToOne
     private OpcionNumerica opcionSeleccionada;
 
+    @ReadOnly // Hacemos que la fecha sea de solo lectura en la interfaz para que nadie la altere
     private LocalDateTime fechaRespuesta;
 
-    @ReadOnly
+    // --- MEJORA 1: ASIGNACIÓN AUTOMÁTICA DE FECHA ---
+    @PrePersist
+    protected void onCreate() {
+        this.fechaRespuesta = LocalDateTime.now();
+    }
+
+    // --- MEJORA 2: PROPIEDAD CALCULADA OPTIMIZADA ---
     public Boolean getCorrecta() {
         if (opcionSeleccionada == null) return false;
         return Boolean.TRUE.equals(opcionSeleccionada.getCorrecta());
     }
-
 }
