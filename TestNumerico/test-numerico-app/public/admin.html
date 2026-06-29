@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel Admin - Resultados</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container" style="max-width: 1200px;">
+    <!-- Botón para volver al menú -->
+    <a href="index.html" class="back-link">← Volver al menú</a>
+    
+    <h1>Resultados de Evaluaciones</h1>
+    <input type="password" id="adminToken" placeholder="Token de Administrador" style="max-width: 300px;">
+    <button id="btnLoad" style="width: auto; padding: 0.75rem 1.5rem;">Cargar Resultados</button>
+    <table id="resultsTable" style="display: none;">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Código</th>
+          <th>Test</th>
+          <th>Estado</th>
+          <th>Aciertos</th>
+          <th>Errores</th>
+          <th>Omitidas</th>
+          <th>Puntaje</th>
+          <th>Fecha</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

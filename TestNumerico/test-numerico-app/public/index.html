@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Evaluación - Inicio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container home-container">
+    <h1>Sistema de Evaluación</h1>
+    <p class="subtitle">Seleccione su rol para continuar</p>
+    
+    <div class="role-cards">
+      <!-- Tarjeta Evaluado -->
+      <div class="role-card" id="btnEvaluado">
+        <div class="role-icon">👤</div>
+        <h2>Evaluado</h2>
+        <p>Realizar un test de evaluación con código de acceso</p>
+        <button>Ingresar como Evaluado</button>
+      </div>
+
+      <!-- Tarjeta Administrador -->
+      <div class="role-card" id="btnAdmin">
+        <div class="role-icon">🔐</div>
+        <h2>Administrador</h2>
+        <p>Gestionar tests, evaluados y ver resultados</p>
+        <button>Ingresar como Administrador</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('btnEvaluado').addEventListener('click', () => {
+      window.location.href = 'candidate.html';
+    });
+
+    document.getElementById('btnAdmin').addEventListener('click', () => {
+      window.location.href = 'admin.html';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ingreso a Test</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Botón para volver al menú -->
+    <a href="index.html" class="back-link">← Volver al menú</a>
+    
+    <!-- Pantalla 1: Ingreso de código -->
+    <div id="pantallaCodigo">
+      <h1>Evaluación de Razonamiento</h1>
+      <p>Ingrese su código de acceso provisto por el administrador.</p>
+      <input type="text" id="codigoInput" placeholder="Código de acceso" maxlength="20">
+      <button id="btnIngresar">Ingresar</button>
+      <p id="error" style="color: red; display: none;"></p>
+    </div>
+
+    <!-- Pantalla 2: Selección de test -->
+    <div id="pantallaTests" style="display: none;">
+      <h1>Bienvenido, <span id="nombreEvaluado"></span></h1>
+      <p>Seleccione el test que desea realizar:</p>
+      <div id="listaTests"></div>
+    </div>
+  </div>
+  <script type="module" src="js/candidate.js"></script>
+</body>
+</html>

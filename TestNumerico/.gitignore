@@ -1,7 +1,28 @@
+# ========================
+# Node.js / Express
+# ========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env.local
+.env.production
+.env.example
+
+# ========================
+# Java / OpenXava / Maven
+# ========================
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+*.class
+*.jar
+*.war
+*.ear
+
+### Kotlin ###
 .kotlin
 
 ### IntelliJ IDEA ###
@@ -12,6 +33,7 @@ target/
 *.iws
 *.iml
 *.ipr
+.idea/vcs.xml
 
 ### Eclipse ###
 .apt_generated
@@ -38,8 +60,13 @@ build/
 ### Mac OS ###
 .DS_Store
 
+### Windows ###
+Thumbs.db
+desktop.ini
+
 # Archivos temporales de Base de Datos locales
 *.lck
 
-# Cualquier otro archivo de configuración de IntelliJ que falte
-.idea/vcs.xml
+# Logs
+logs/
+*.log
